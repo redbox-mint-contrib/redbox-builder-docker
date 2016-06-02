@@ -1,0 +1,16 @@
+<settings>
+<!-- settings.xml -->
+    <servers>
+        <server>
+            <!-- Maven Central Deployment -->
+            <id>sonatype-nexus-snapshots</id>
+            <username>${env.SONATYPE_USERNAME}</username>
+            <password>${env.SONATYPE_PASSWORD}</password>
+        </server>
+        <server>
+            <id>redbox-nexus-snapshots</id>
+            <username>${env.SONATYPE_USERNAME}</username>
+            <password>${env.SONATYPE_PASSWORD}</password>
+        </server>
+     </servers>
+</settings>
