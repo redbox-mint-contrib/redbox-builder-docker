@@ -1,0 +1,76 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>org.semanticdesktop.aperture</groupId>
+		<artifactId>aperture-extractor-text</artifactId>
+		<version>1.4.0</version>
+	</parent>
+
+	<artifactId>aperture-extractor-text-html</artifactId>
+	<packaging>bundle</packaging>
+
+	<name>Aperture Core: Extractor - text HTML</name>
+	<description>HTML extractor</description>	
+
+	<dependencies>
+		<dependency>
+			<groupId>org.semanticdesktop.aperture</groupId>
+			<artifactId>aperture-extractor-core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.semanticdesktop.aperture</groupId>
+			<artifactId>aperture-helper-html</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.semanticdesktop.aperture</groupId>
+			<artifactId>aperture-rdf</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.semanticdesktop.aperture</groupId>
+			<artifactId>aperture-util</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.semanticdesktop.aperture</groupId>
+			<artifactId>aperture-vocabulary-core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.semanticdesktop.aperture</groupId>
+			<artifactId>aperture-testcore</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.semweb4j</groupId>
+			<artifactId>rdf2go.api</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.osgi</groupId>
+			<artifactId>osgi_R4_core</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>   
+				<groupId>org.apache.felix</groupId>
+				<artifactId>maven-bundle-plugin</artifactId>
+				<version>${maven.bundle.plugin.version}</version>
+				<extensions>true</extensions>
+				<configuration>
+					<instructions>
+						<Export-Package>org.semanticdesktop.aperture.extractor.html</Export-Package>
+						<Private-Package>org.semanticdesktop.aperture.extractor.html.bundle</Private-Package>
+						<Bundle-Activator>org.semanticdesktop.aperture.extractor.html.bundle.HtmlExtractorActivator</Bundle-Activator>
+					</instructions>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>		
+</project>

@@ -1,0 +1,99 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>org.semanticdesktop.aperture</groupId>
+	<artifactId>aperture-root-pom</artifactId>
+	<version>5</version>
+	<packaging>pom</packaging>
+
+	<name>Aperture root pom</name>
+	<description>Aperture root pom</description>
+	<url>http://aperture.semanticdesktop.org/</url>
+
+	<organization>
+		<name>Aperture Development Team</name>
+		<url>http://aperture.semanticdesktop.org/</url>
+	</organization>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+	</properties>
+
+	<repositories>
+		<repository>
+			<id>aduna-opensource.releases</id>
+			<name>Aduna Open Source - Maven releases</name>
+			<url>http://repo.aduna-software.org/maven2/releases</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>semweb4j.releases</id>
+			<name>Semweb4j.org - Maven releases</name>
+			<url>http://semweb4j.org/repo/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+
+	<distributionManagement>
+		<repository>
+			<id>semweb4j-repo</id>
+			<name>semweb4j.org maven repository server</name>
+			<url>scp://${semweb4j.repo}</url>
+			<uniqueVersion>false</uniqueVersion>
+		</repository>
+
+		<snapshotRepository>
+			<id>semweb4j-snapshots</id>
+			<name>semweb4j.org maven SNAPSHOT repository server</name>
+			<url>scp://${semweb4j.snapshots}</url>
+			<uniqueVersion>true</uniqueVersion>
+		</snapshotRepository>
+
+		<site>
+			<id>semweb4j-site</id>
+			<name>semweb4j.org site server</name>
+			<url>scp://${semweb4j.site}/${artifactId}</url>
+		</site>
+	
+		<!--  <repository>
+			<id>aperture-repo</id>
+			<name>Aperture Repository</name>
+			<url>sftp://web.sourceforge.net/home/groups/a/ap/aperture/htdocs/maven</url>
+			<uniqueVersion>false</uniqueVersion>
+		</repository>-->
+		
+<!--		<repository>-->
+<!--			<id>aduna-opensource.releases.deploy</id>-->
+<!--			<name>Aduna Open Source - Maven releases</name>-->
+<!--			<url>scp://repo.aduna-software.org:2222/var/local/hosts/repo.aduna-software.org/maven2/releases</url>-->
+<!--			<uniqueVersion>false</uniqueVersion>-->
+<!--		</repository>-->
+<!--		<snapshotRepository>-->
+<!--			<id>aduna-opensource.snapshots.deploy</id>-->
+<!--			<name>Aduna Open Source - Maven snapshots</name>-->
+<!--			<url>scp://repo.aduna-software.org:2222/var/local/hosts/repo.aduna-software.org/maven2/snapshots</url>-->
+<!--			<uniqueVersion>false</uniqueVersion>-->
+<!--		</snapshotRepository>-->
+	</distributionManagement>
+
+	<scm>
+		<connection>scm:svn:http://aperture.svn.sourceforge.net/svnroot/aperture</connection>
+		<developerConnection>scm:svn:https://aperture.svn.sourceforge.net/svnroot/aperture</developerConnection>
+		<url>http://aperture.svn.sourceforge.net/viewvc/aperture</url>
+	</scm>
+</project>

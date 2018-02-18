@@ -1,0 +1,74 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>org.semanticdesktop.aperture</groupId>
+		<artifactId>aperture-accessor</artifactId>
+		<version>1.4.0</version>
+	</parent>
+
+	<artifactId>aperture-accessor-core</artifactId>
+	<packaging>bundle</packaging>
+
+	<name>Aperture Core: Accessor - Core</name>
+	<description>Core Accessor API</description>
+	
+	<dependencies>
+		<dependency>
+			<groupId>org.semanticdesktop.aperture</groupId>
+			<artifactId>aperture-rdf</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.semanticdesktop.aperture</groupId>
+			<artifactId>aperture-datasource-core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.semanticdesktop.aperture</groupId>
+			<artifactId>aperture-util</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.semanticdesktop.aperture</groupId>
+			<artifactId>aperture-vocabulary-core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.semanticdesktop.aperture</groupId>
+			<artifactId>aperture-runtime-optional</artifactId>
+			<type>pom</type>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.semweb4j</groupId>
+			<artifactId>rdf2go.api</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.osgi</groupId>
+			<artifactId>osgi_R4_core</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+		</dependency>
+	</dependencies>
+	
+	<build>
+		<plugins>
+			<plugin>   
+				<groupId>org.apache.felix</groupId>
+				<artifactId>maven-bundle-plugin</artifactId>
+				<version>${maven.bundle.plugin.version}</version>
+				<extensions>true</extensions>
+				<configuration>
+					<instructions>
+						<Export-Package>org.semanticdesktop.aperture.accessor,org.semanticdesktop.aperture.accessor.base</Export-Package>
+						<Private-Package>org.semanticdesktop.aperture.accessor.impl,org.semanticdesktop.aperture.accessor.bundle</Private-Package>
+						<Bundle-Activator>org.semanticdesktop.aperture.accessor.bundle.AccessorServiceActivator</Bundle-Activator>
+					</instructions>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>		
+</project>

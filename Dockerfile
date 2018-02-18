@@ -7,4 +7,5 @@ ENV JAVA_HOME /usr/lib/jvm/jre-1.7.0-openjdk
 RUN mkdir m2_repo
 COPY travis-settings.xml m2_repo/
 RUN mkdir build;mkdir -p /root/.m2
+COPY org /root/.m2/
 CMD cd build;git clone $CLONEPATH src; cd src; mvn -Dmaven.repo.local=/m2_repo clean package

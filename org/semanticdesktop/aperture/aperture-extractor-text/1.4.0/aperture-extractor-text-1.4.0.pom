@@ -1,0 +1,23 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>org.semanticdesktop.aperture</groupId>
+		<artifactId>aperture-extractor</artifactId>
+		<version>1.4.0</version>
+	</parent>
+
+	<artifactId>aperture-extractor-text</artifactId>
+	<packaging>pom</packaging>
+
+	<name>Aperture Core: Extractors - text</name>
+	<description>Extractors for text formats</description>
+
+	<modules>
+		<module>html</module>
+		<module>plain</module>
+		<module>rtf</module>
+		<module>xml</module>
+	</modules>
+</project>

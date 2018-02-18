@@ -1,0 +1,27 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>org.semanticdesktop.aperture</groupId>
+		<artifactId>aperture-core</artifactId>
+		<version>1.4.0</version>
+	</parent>
+
+	<artifactId>aperture-datasource</artifactId>
+	<packaging>pom</packaging>
+
+	<name>Aperture Core: Datasources</name>
+	<description>Definition of various data sources</description>
+
+	<modules>
+		<module>core</module>
+		<module>filesystem</module>
+		<module>ical</module>
+		<module>imap</module>
+		<module>mbox</module>
+		<module>web</module>
+
+		<module>maven-plugin</module>
+	</modules>
+</project>
