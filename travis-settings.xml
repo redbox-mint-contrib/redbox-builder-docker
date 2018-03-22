@@ -13,4 +13,12 @@
             <password>${env.SONATYPE_PASSWORD}</password>
         </server>
      </servers>
+     <mirrors>
+       <mirror>
+         <id>rb_public</id>
+         <name>RB Public Nexus RM</name>
+         <url>http://dev.redboxresearchdata.com.au/nexus/content/groups/public/</url>
+         <mirrorOf>*</mirrorOf>
+       </mirror>
+     </mirrors>
 </settings>
